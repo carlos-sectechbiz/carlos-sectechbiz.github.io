@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -6,46 +7,42 @@
   <title>Carlos Aguirre – Portafolio Técnico-Comercial</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <style>
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
       background-color: #0f172a;
       color: #f8fafc;
+      animation: fadeInUp 1s ease-in-out;
     }
-
     header {
       background: linear-gradient(90deg, #0ea5e9, #6366f1);
       padding: 2rem;
       text-align: center;
       color: white;
     }
-
     h1 {
       margin: 0;
       font-size: 2.5rem;
     }
-
     h2 {
       margin-top: 0.5rem;
       font-weight: normal;
       font-size: 1.2rem;
     }
-
     section {
       padding: 2rem;
       max-width: 900px;
       margin: auto;
+      animation: fadeInUp 1s ease-in-out;
     }
-
     h3 {
       border-bottom: 2px solid #38bdf8;
       padding-bottom: 0.5rem;
     }
-
-    .tech-icons i {
-      margin-right: 10px;
-    }
-
     .badge {
       background-color: #1e293b;
       padding: 0.4rem 0.7rem;
@@ -54,22 +51,38 @@
       margin: 5px 5px 5px 0;
       display: inline-block;
     }
-
     a {
       color: #38bdf8;
       text-decoration: none;
     }
-
     a:hover {
       text-decoration: underline;
     }
-
+    button {
+      background-color: #38bdf8;
+      color: #0f172a;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 10px;
+    }
     footer {
       background-color: #1e293b;
       padding: 1rem;
       text-align: center;
       font-size: 0.9rem;
       color: #94a3b8;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 5px 0 15px 0;
+      background: #1e293b;
+      color: #f8fafc;
+      border: 1px solid #334155;
+      border-radius: 5px;
     }
   </style>
 </head>
@@ -78,6 +91,7 @@
   <header>
     <h1>Carlos Eduardo Aguirre Figarella</h1>
     <h2><i class="fas fa-cloud-shield"></i> KAM Técnico | Cloud · Ciberseguridad · Automatización</h2>
+    <a href="assets/CarlosAguirreCV.pdf" download><button>📄 Descargar CV</button></a>
   </header>
 
   <section>
@@ -94,45 +108,35 @@
     <div class="badge">Nmap</div>
     <div class="badge">WPScan</div>
     <div class="badge">API REST</div>
-    <div class="badge">Pentesting</div>
     <div class="badge">Automatización</div>
-    <div class="badge">Seguridad Cloud</div>
   </section>
 
   <section>
-    <h3><i class="fas fa-laptop-code"></i> Proyectos destacados</h3>
+    <h3><i class="fas fa-laptop-code"></i> Proyectos</h3>
     <ul>
-      <li><strong>Pentest sobre WordPress en AWS</strong> – <a href="https://github.com/carlos-sectechbiz/pentest-wordpress-aws" target="_blank">Ver repositorio</a></li>
-      <li><strong>Alertas de seguridad automatizadas</strong> – <a href="https://github.com/carlos-sectechbiz/n8n-security-alerts" target="_blank">Ver repositorio</a></li>
-      <li><strong>Auditoría de permisos IAM en AWS</strong> – <a href="https://github.com/carlos-sectechbiz/aws-iam-audit" target="_blank">Ver repositorio</a></li>
+      <li><strong>Pentest WordPress AWS</strong> – <a href="#">Ver repositorio</a></li>
+      <li><strong>Alertas seguridad N8N</strong> – <a href="#">Ver repositorio</a></li>
     </ul>
   </section>
 
   <section>
-    <h3><i class="fas fa-certificate"></i> Certificaciones</h3>
-    <ul>
-      <li>✔️ AWS Cloud Quest Practitioner</li>
-      <li>✔️ Máster en Ciberseguridad – IMF</li>
-      <li>✔️ (Añade más aquí si los tienes o cuando los completes)</li>
-    </ul>
+    <h3><i class="fas fa-link"></i> Portafolio Notion</h3>
+    <iframe src="https://carlos-aguirre.notion.site" width="100%" height="400px" style="border:1px solid #334155; border-radius: 5px;"></iframe>
   </section>
 
   <section>
-    <h3><i class="fas fa-briefcase"></i> ¿Qué busco?</h3>
-    <p>Estoy abierto a colaborar en proyectos donde la tecnología genere impacto real. Mi foco: soluciones cloud seguras, procesos automatizados y soporte técnico-comercial en entornos híbridos.</p>
-  </section>
-
-  <section>
-    <h3><i class="fas fa-link"></i> Contacto</h3>
-    <ul>
-      <li><i class="fas fa-envelope"></i> <a href="mailto:carlosaguirre25@gmail.com">carlosaguirre25@gmail.com</a></li>
-      <li><i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/carlos-aguirre-618498115" target="_blank">linkedin.com/in/carlos-aguirre</a></li>
-      <li><i class="fas fa-external-link-alt"></i> Portafolio en Notion: <em>(disponible próximamente)</em></li>
-    </ul>
+    <h3><i class="fas fa-paper-plane"></i> Contacto</h3>
+    <form action="https://docs.google.com/forms/u/0/d/e/YOUR_GOOGLE_FORM_ID/formResponse" method="POST" target="_blank">
+      <input type="text" name="entry.YOUR_NAME_ID" placeholder="Tu nombre" required>
+      <input type="email" name="entry.YOUR_EMAIL_ID" placeholder="Tu correo" required>
+      <textarea name="entry.YOUR_MESSAGE_ID" rows="5" placeholder="Tu mensaje..." required></textarea>
+      <button type="submit">Enviar mensaje</button>
+    </form>
+    <p>*Este formulario usa Google Forms como backend*</p>
   </section>
 
   <footer>
-    © 2025 Carlos Aguirre – Cloud & Cybersecurity | Construido con 💻, ☕ y pasión por la solución técnica con visión de negocio.
+    © 2025 Carlos Aguirre – Cloud & Cybersecurity | Con 💻, ☕ y visión de negocio.
   </footer>
 
 </body>
